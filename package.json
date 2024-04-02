@@ -1,0 +1,16 @@
+{
+    "type": "module",
+    "name": "@mediaclip/http-pipeline",
+    "version": "1.0.0",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsup",:
+        "clean": "tsc --build --clean --incremental tsconfig.json"
+    },
+    "devDependencies": {
+        "typescript": "^5.4.3",
+        "tsup": "^8.0.2"
+    }
+}
