@@ -4,6 +4,7 @@
   "type": "module",
   "license": "MIT",
   "dependencies": {
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "@mediaclip/http-pipeline": "^1.0.3"
   }
 }

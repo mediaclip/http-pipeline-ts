@@ -41,19 +41,20 @@ export class HttpMessageBuilder {
         return this;
     }
 
-    public withHeader(name: string, value?: string | null) {
+    public withHeader(name: string, value?: string | null): this {
         if (value) {
             this.headers[name] = value;
         }
         return this;
     }
 
-    public withProperty(name: symbol, value: any) {
+    public withProperty<T>(name: symbol, value: T): this;
+    public withProperty(name: symbol, value: any): this {
         this.properties[name] = value;
         return this;
     }
 
-    public withCors(corsOptions: CorsOptions) {
+    public withCors(corsOptions: CorsOptions): this {
         this.corsOptions = corsOptions;
         return this;
     }
