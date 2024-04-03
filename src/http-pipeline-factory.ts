@@ -10,7 +10,7 @@ export class HttpPipelineFactory {
     build(options: HttpPipelineOptions): IHttpPipeline {
         const pipeline: HttpPipelinePolicy[] = [
             ...options.perCallPolicies,
-            new RetryHttpPipelinePolicy(options),
+            options.retryPolicy ?? new RetryHttpPipelinePolicy(options),
             ...options.perRetryPolicies,
             new TransportHttpPipelinePolicy(options),
         ];

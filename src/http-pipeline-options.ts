@@ -7,6 +7,7 @@ export class HttpPipelineOptions {
     public timeoutMs = 15_000;
     public perRetryPolicies: HttpPipelinePolicy[] = [];
     public perCallPolicies: HttpPipelinePolicy[] = [];
+    public retryPolicy?: HttpPipelinePolicy;
 
     constructor(fetch?: typeof window.fetch) {
         this.fetch = fetch ?? window.fetch;
