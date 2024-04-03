@@ -1,0 +1,9 @@
+{
+  "name": "simple-sample",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.4.3"
+  }
+}

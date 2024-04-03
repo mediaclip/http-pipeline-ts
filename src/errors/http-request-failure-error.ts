@@ -4,17 +4,17 @@ export class HttpRequestFailureError extends Error {
         public url: string,
         public method: string,
         public status?: number,
-        public jsonBody?: any,
+        public body?: any,
     ) {
         super(message);
         Object.setPrototypeOf(this, HttpRequestFailureError.prototype);
     }
 
-    tryParseJsonBody<T>() : T | undefined {
-        if (!this.jsonBody)
+    tryParseBodyAsJson<T>() : T | undefined {
+        if (!this.body)
             return undefined;
         try {
-            return JSON.parse(this.jsonBody)
+            return JSON.parse(this.body)
         }
         catch (e) {
             return undefined;

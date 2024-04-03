@@ -1,12 +1,13 @@
 {
     "type": "module",
+    "license": "MIT",
     "name": "@mediaclip/http-pipeline",
     "version": "1.0.0",
     "main": "./dist/index.js",
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsup",:
+        "build": "tsup",
         "clean": "tsc --build --clean --incremental tsconfig.json"
     },
     "devDependencies": {
