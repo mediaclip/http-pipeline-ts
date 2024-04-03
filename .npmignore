@@ -3,3 +3,6 @@ samples/
 tsconfig.json
 tsup.config.ts
 .gitignore
+.idea
+.editorconfig
+tsconfig.tsbuildinfo
