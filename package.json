@@ -24,7 +24,7 @@
         "clean": "tsc --build --clean --incremental tsconfig.json"
     },
     "devDependencies": {
-        "typescript": "^5.4.3",
-        "tsup": "^8.0.2"
+        "typescript": "^5.8.3",
+        "tsup": "^8.5.0"
     }
 }
