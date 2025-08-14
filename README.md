@@ -16,7 +16,7 @@ type Response = {
 
 class MyAwesomeClient {
     constructor(
-        private readonly httpPipeline: HttpPipeline,
+        private readonly httpPipeline: IHttpPipeline,
         private readonly httpMessageResponseUtil: IHttpMessageResponseUtil,
     ) {
     }
@@ -33,8 +33,8 @@ class MyAwesomeClient {
             })
             .build();
 
-        await pipeline.send(message);
-        return httpMessageResponseUtil.parseJsonResponse<Response>(message);
+        await this.httpPipeline.send(message);
+        return this.httpMessageResponseUtil.parseJsonResponse<Response>(message);
     }
 }
 
