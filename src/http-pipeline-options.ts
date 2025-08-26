@@ -10,6 +10,6 @@ export class HttpPipelineOptions {
     public retryPolicy?: HttpPipelinePolicy;
 
     constructor(customFetch?: typeof globalThis.fetch) {
-        this.fetch = customFetch ?? globalThis.fetch ?? fetch;
+        this.fetch = customFetch ?? globalThis.fetch;
     }
 }
