@@ -9,6 +9,7 @@
     "keywords": ["fetch", "http", "pipeline"],
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
+    "sideEffects": false,
     "exports": {
         "require": {
             "types": "./dist/index.d.cts",
