@@ -6,7 +6,7 @@ export class HttpMessageBuilder {
     private queryStrings: { name: string, value: string }[] = [];
     private headers: { [name: string]: string } = {};
     private properties: { [name: symbol]: any } = {};
-    private body?: string | FormData;
+    private body?: string | FormData | Blob | ArrayBuffer;
     private corsOptions?: CorsOptions;
     private shouldReadResponseAsBlob = false;
 
@@ -38,6 +38,13 @@ export class HttpMessageBuilder {
     public withFormDataBody(formData: FormData): this {
         this.headers["Content-Type"] = "application/json; charset=utf-8";
         this.body = formData;
+        return this;
+    }
+
+    public withRawBody(body: Blob | ArrayBuffer, contentType?: string): this {
+        if (contentType)
+            this.headers["Content-Type"] = contentType;
+        this.body = body;
         return this;
     }
 
