@@ -7,6 +7,6 @@ export class HttpRequest {
 
     method = "GET";
     headers: { [name: string]: string } = {};
-    body?: string | FormData;
+    body?: string | FormData | Blob | ArrayBuffer;
     corsOptions?: CorsOptions;
 }
