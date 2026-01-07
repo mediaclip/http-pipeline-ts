@@ -4,7 +4,7 @@
     "repository": "https://github.com/mediaclip/http-pipeline-ts",
     "description": "HTTP Pipeline is a library designed to assist in creating HTTP Clients using a clean, structured approach inspired by Azure's HttpPipeline. It provides an alternative to manual fetch() calls by employing a builder pattern for request creation.",
     "name": "@mediaclip/http-pipeline",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "main": "./dist/index.js",
     "keywords": ["fetch", "http", "pipeline"],
     "module": "./dist/index.js",
